@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../redux/MoviesSlice";
+import {MovieCard} from "../components/MovieCard"
 
 function MainPage() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -9,15 +10,20 @@ function MainPage() {
     // const POSTER_PATH = `http://image.tmdb.org/t/p/w440_and_h660_face/${POSTER_PATH}`;
 
   const dispatch = useDispatch();
-  const data = useSelector(({movies}) => movies);
+  const movies = useSelector(({movies}) => movies);
   useEffect(() => {
     dispatch(fetchMovies({API,}));
   }, []);
-  console.log('data', data);
+  console.log('data', movies);
   return (
     <>
-      <div>
-        {data && data.map((movie) => <h2 key={movie.id}>{movie.title}</h2>)}
+      <div className="movies-container">
+        {movies && movies.map(({id, title, overview, poster_path}) => <MovieCard 
+        id={id}
+        title={title}
+        description={overview}
+        img={`http://image.tmdb.org/t/p/w440_and_h660_face/${poster_path}`}
+        />)}
       </div>
     </>
   );
