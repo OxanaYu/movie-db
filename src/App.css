@@ -45,3 +45,9 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.pagination {
+  margin: 20px auto;
+  align-self: center;
+  transform: translate(40%);
+}
