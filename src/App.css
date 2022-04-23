@@ -47,7 +47,8 @@
 }
 
 .pagination {
-  margin: 20px auto;
-  align-self: center;
-  transform: translate(40%);
+  max-width: 800px;
+  margin: 50px auto 50px;
+  display: flex;
+  justify-content: center;
 }

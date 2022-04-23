@@ -1,15 +1,8 @@
 import React from 'react';
 import './App.css';
-import {MainPage} from './pages/MainPage';
+import {Router} from "./Router"
 
 
-function App() {
-  return (
-    <div className="App">
-      <MainPage/>
-  
-    </div>
-  );
-}
+const App = () => <Router/>
 
 export default App;
