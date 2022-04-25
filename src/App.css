@@ -39,7 +39,7 @@
 
 
 .movies-container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 10px auto;
   display: flex;
   justify-content: space-around;
@@ -51,4 +51,17 @@
   margin: 50px auto 50px;
   display: flex;
   justify-content: center;
+}
+
+.movie-card {
+  margin-right: 10px;
+}
+
+.movie-card img {
+  display: inline-block;
+  width: 80%;
+}
+
+.movie-page-header{
+  margin-bottom: 50px;
 }
