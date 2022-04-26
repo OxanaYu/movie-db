@@ -74,7 +74,7 @@ class MoviePageHeader extends React.Component {
                     component="div"
                     sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                   >
-                    You are on page {currentPage} of our website
+                    New movie releases. You are on page {currentPage}.
                   </Typography>
                   <Search>
                     <SearchIconWrapper>
